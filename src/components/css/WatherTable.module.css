@@ -1,0 +1,8 @@
+.cont{
+    width: 85%;
+}
+@media screen and (max-width:542px) {
+    .cont{
+        width: 90%;
+    }
+}

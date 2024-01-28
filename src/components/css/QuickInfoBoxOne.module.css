@@ -1,0 +1,29 @@
+.mainContainer{
+    width: 100%;
+    background-color: #47CD82;
+    display: flex;
+    padding: 15px 10px;
+}
+.mainContainer div:first-child{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.mainContainer div:nth-child(2){
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 70%;
+}
+.mainContainer div:first-child h3{
+    font-size: 2em;
+    font-weight: 600;
+}
+.mainContainer div:first-child p{
+    font-size: 1em;
+    font-weight: 400;
+}

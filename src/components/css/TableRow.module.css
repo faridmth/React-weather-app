@@ -1,0 +1,117 @@
+.mainCont:first-child{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+}
+.mainCont:last-child{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+.rowCont{
+    background-color: #E3E4E5;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 500ms;
+    font-size: 18px;
+    
+}
+.rowCont:first{
+    display: none;
+}
+.rowCont:hover{
+    background-color: #47CD82 !important;
+}
+
+.arrowDown{
+    width: 24px;
+    height: 23px;
+    transition: 400ms;
+}
+.windDirArrow{
+    width: 30px;
+}
+.time{
+    width: 65px;
+}
+.temp{
+    width: 45px;
+}
+.desCont{
+    display: flex;
+    align-items: center;
+    width:25% ;
+}
+.desCont img{
+    width: 35px;
+    margin-right: 8px;
+}
+.moreInfoCont {
+    overflow: hidden;
+}
+.isOpen {
+transition: 800ms;
+} 
+.isClosed {
+ transition: 200ms;   
+}
+  
+@media screen and (max-width:1290px) {
+    .rowCont p{
+        font-size: max(1.3vw,12px) ;  
+    }
+}
+@media screen and (max-width:632px) {
+    .time{
+        width: 35px;
+    }
+    .temp{
+        width: 35px;
+    }
+
+}
+@media screen and (max-width:632px) {
+    .temMaxP{
+        display: none;
+    } 
+}
+@media screen and (max-width:542px) {
+    .desCont{
+        width:130px !important;
+    }
+    
+}
+@media screen and (max-width:426px) {
+    .rowCont{
+        padding: 10px 8px;  
+    }
+    .windSpeedP{
+        display: none;
+    } 
+    .desCont img{
+        width: 28px;
+    }
+    .arrowDown{
+        width: 16px;
+        height: 15px;
+    }
+    .windDirArrow{
+        width:20px;
+    }
+    .rowCont p{
+        font-size: max(1.3vw,10px) ;  
+    }
+    .desCont{
+        width:100px !important;
+    }
+    
+}
+@media screen and (max-width:322px) {
+    .rowCont p{
+        font-size: max(1.3vw,8px) ;  
+    }
+}
