@@ -24,9 +24,11 @@ const Input = ({locationInfoUpdater}) => {
       setValue('')
       clearSuggestions()
       getGeocode({address: e.target.innerText}).then((results) => {
+        
         getDetails({placeId :results[0].place_id}).then(res=>
           locationInfoUpdater({cityName:res.name,coords:getLatLng(results[0])})
-        )
+       )
+       
       }); 
     }
   return (

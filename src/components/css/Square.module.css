@@ -5,6 +5,7 @@
     justify-content: center;
     padding: 8px 0px;
     font-weight: 600;
+    font-size: 16px;
 }
 .img{
     margin-bottom: 5px;
@@ -16,3 +17,9 @@
     color: white;
     
 }
+@media screen and (max-width:290px) {
+    .green,.white{
+        font-size: 12px;
+
+    }
+  }

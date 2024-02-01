@@ -1,8 +1,9 @@
 .cont{
     width: 85%;
+    transition: 500ms;
 }
 @media screen and (max-width:542px) {
     .cont{
-        width: 90%;
+        width: 98%;
     }
 }

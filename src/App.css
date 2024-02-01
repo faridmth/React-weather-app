@@ -8,3 +8,28 @@
   display: flex;
   justify-content: center;
 }
+.mainCard-map-container{
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+@media screen and (max-width:1239px) {
+  .mainCard-map-container{
+    width: 100%;
+  }
+}
+@media screen and (max-width:766px) {
+  .mainCard-map-container{
+    justify-content: center;
+  }
+
+}
+@media screen and (max-width:352px) {
+  .mainCard-map-container{
+    padding: 5px;
+  }
+}
