@@ -6,14 +6,12 @@
 .table-container{
   margin-top: 45px;
   display: flex;
-  justify-content: center;
+  margin-left: 10px;
 }
 .mainCard-map-container{
   display: flex;
-  padding: 25px;
-  justify-content: center;
-  align-content: center;
   flex-wrap: wrap;
+  margin-left: 10px;
   width: 80%;
 }
 

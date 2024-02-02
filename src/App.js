@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <div className='mainCard-map-container'>
       <MainCard hourlyForcast={hourlyForcast} setlocationInfo={setlocationInfo} locationInfo={locationInfo} dateNow={dateNow}/> 
-      <WatherMap data={citiesMapData2===null?null:[...citiesMapData2,...citiesMapData]}/>
+      <WatherMap data={citiesMapData2===null||citiesMapData===null?null:[...citiesMapData2,...citiesMapData]}/>
       </div>
     <div className='table-container'>
     {true &&<WatherTable  hourlyForcast={hourlyForcast===null?null:hourlyForcast.list} dailyForcast={dailyForcast===null?null:dailyForcast.list}/>

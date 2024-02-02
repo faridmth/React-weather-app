@@ -65,12 +65,7 @@ const TableBody = ({menuSelect,hourlyForcast,dailyForcast}) => {
         })
     }
   }
-  console.log(dataToDisplay)
 
-
-  
-
- 
   return (
     <div className={Styles.cont}>
       {

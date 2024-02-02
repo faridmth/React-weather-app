@@ -5,8 +5,7 @@ import Styles from './css/WatherTable.module.css'
 
 const WatherTable = ({hourlyForcast,dailyForcast}) => {
   let currentDate=new Date()
-  const[menuSelect,setMenuSelect]=useState({ type: "daily", daysNumber: "30", active: "30 jour" })
-
+  const[menuSelect,setMenuSelect]=useState({  type: "hourly", date: "2", active: "Aujourd’hui" })
   return (
     <div className={Styles.cont}>
       <Menu menuSelect={menuSelect} setMenuSelect={setMenuSelect} /> 

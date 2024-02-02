@@ -6,6 +6,7 @@
     flex: 0.8;
     min-width: 350px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 0;
 }
@@ -15,7 +16,25 @@
     max-width: 600px;
     border: 3px solid green;
     background-color: rgb(196, 246, 253);
+    margin-bottom: 7px;
 }
+/*leaflet-tooltip tooltip leaflet-zoom-animated leaflet-tooltip-left*/
+
+.leaflet-tooltip{
+    background-color: #ffffff;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    z-index: -888888;
+    
+}
+.leaflet-tooltip-top::before{
+    display: none;
+}
+
+
 :root{
     --bottom:0px;
     --left:-150px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Popup,Marker  } from 'react-leaflet'
+import {Popup,Marker,Tooltip } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import {Icon} from 'leaflet'
 
@@ -9,14 +9,13 @@ const MapElement = ({data}) => {
         iconSize : [36,36],
         iconAnchor : [18,30], 
         className: 'map-icon',
-        popupAnchor: [0, -30] 
+        popupAnchor: [0, -30] ,
       })
 
   return (
     <div>
         <Marker
             position={[data.position[0],data.position[1]]}
-            
             icon={ legalIcon }
             eventHandlers={{
                 mouseover: (e) => {
@@ -24,13 +23,14 @@ const MapElement = ({data}) => {
                 document.documentElement.style.setProperty('--bottom',data.position[0]>46?'-200px':'10px');
                 document.documentElement.style.setProperty('--left',data.position[1]>2?'-190px':'-15px');
 
-                console.log(data.position[1])
                 },
                 mouseout: (e) => {
                     e.target.closePopup()
                 },
             }}
+            
         >
+            <Tooltip offset={[0,-23]} direction='top' permanent={true} className='tooltip' opacity={1}>{data.temp}</Tooltip>
             <Popup autoPan={false}>
                 <div className='popup-info-conatiner'>
                     <p className='popup-city-name'>{data.name}</p>

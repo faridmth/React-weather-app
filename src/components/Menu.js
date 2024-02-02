@@ -38,7 +38,10 @@ const Menu = ({menuSelect,setMenuSelect}) => {
             }),
             singleValue:(baseStyle)=>({
                 ...baseStyle,
-                color : whoIsActive=='select'?"#47CD82":'black',
+                color : whoIsActive=='select'?"white":'black',
+                backgroundColor : whoIsActive=='select'?"#47CD82":'white',
+                padding : whoIsActive=='select'?"8px 12px":'0px',
+                borderRadius : whoIsActive=='select'?"2px":'0px',
                 fontWeight : whoIsActive=='select'?500:''
             }),
             dropdownIndicator:(baseStyle)=>({

@@ -61,7 +61,7 @@ const WatherMap = ({data}) => {
   ];
   return (
     <div className='map-reset-container'>
-      <MapContainer key={dor} center={cityCoordinates} bounds={bounds}  zoomControl={false} dragging={true} doubleClickZoom={false} boxZoom={false} keyboard={false} scrollWheelZoom={false} zoomSnap={0.1} >
+      <MapContainer key={dor} center={cityCoordinates} bounds={bounds}  zoomControl={false} dragging={false} doubleClickZoom={false} boxZoom={false} keyboard={false} scrollWheelZoom={false} zoomSnap={0.1} >
       <GeoJSON data={countries.features} style={countryStyles}/>
       <GeoJSON data={franceRegions.features} style={regionsStyles} onEachFeature={regionsEventsHandler}/>
 
@@ -71,7 +71,7 @@ const WatherMap = ({data}) => {
         })
       }
     </MapContainer>
-
+      <p>Cliquer sur la ville pour obtenir plus de détails</p>
     </div>
     )
 }
