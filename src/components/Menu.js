@@ -20,7 +20,7 @@ const Menu = ({menuSelect,setMenuSelect}) => {
         <a onClick={handleSelect} value={currentDate.getDate()} className={ `${Styles.a} ${whoIsActive==='Aujourd’hui'&&Styles.active}`}>Aujourd’hui</a>
         <Select className={Styles.select} options={options} 
         onChange={e=>setMenuSelect({type : 'hourly',date:e.value,active:'select'})}
-        placeholder='4 jour heure par heure'
+        placeholder='4 jours heure par heure'
         styles={{
             indicatorSeparator : ()=>({
                 display:'none',

@@ -15,34 +15,22 @@ function App() {
     const [hourlyForcast,setHourlyForcast]=useState(null)
     const [dailyForcast,setDailyForcast]=useState(null)
     ////data for the map
-    const cityIds = '3006787,2994160,2998324,3037854,2984114,2973783,2971549,3033123,3035843,2982652,6614508,3038230,2983990,3030300,2990969,6454979,2972191,6455254,2988507,2996944';
-    const cityIds2 = '2969392,2998286,3031582,3036016,2992703,3014728,6454924,2995469,2992166,2972315,2973385,3032797,2987914,6452235,3027484';
+    const cityIds = '3006787,2994160,2998324,3037854,2984114,2973783,3025892,3033791,3035843,2982652,6614508,3038230,2983990,3030300,2990969,6454979,2972191,3030949,2988507,2996944';
+    const cityIds2 = '2969392,2998286,3031582,3036016,2992703,3016702,6454924,2995469,2992166,2972315,2973385,3032797,2987914,6452235';
     const[citiesMapData,setCitiesMapData]=useState(null)
     const[citiesMapData2,setCitiesMapData2]=useState(null)
-    const[dataHistory,setdataHistory]=useState([])
+
     // update time on evrey fetch 
-    const [dateNow,setDateNow]=useState(new Date())
-
-    /////// fetch data for the card and the table 
+    const [dateNow,seDateNow]=useState(new Date())
     useEffect(()=>{
-      const DataFromHis = dataHistory.find(item=>item.id===`${locationInfo.coords.lat}${locationInfo.coords.lng}`)
-      if(DataFromHis!==undefined){
-        setHourlyForcast(DataFromHis.hourlyForcast)
-        setDailyForcast(DataFromHis.dailyForcast)
-        setDateNow(DataFromHis.date)
-      }else{
-          fetch(`https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${locationInfo.coords.lat}&lon=${locationInfo.coords.lng}&lang=fr&units=metric&appid=${apiKey}`).then(res=>res.json()).then(data=>{
-            setHourlyForcast(data)
-          })
-          fetch(`https://pro.openweathermap.org/data/2.5/forecast/climate?lat=${locationInfo.coords.lat}&lon=${locationInfo.coords.lng}&lang=fr&units=metric&appid=${apiKey}`).then(res=>res.json()).then(data=>{
-            setDailyForcast(data)
-          })
-          setDateNow(new Date())
-      }
-
+      fetch(`https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${locationInfo.coords.lat}&lon=${locationInfo.coords.lng}&lang=fr&units=metric&appid=${apiKey}`).then(res=>res.json()).then(data=>{
+          setHourlyForcast(data)
+      })
+      fetch(`https://pro.openweathermap.org/data/2.5/forecast/climate?lat=${locationInfo.coords.lat}&lon=${locationInfo.coords.lng}&lang=fr&units=metric&appid=${apiKey}`).then(res=>res.json()).then(data=>{
+        setDailyForcast(data)
+    })
+      seDateNow(new Date())
     },[locationInfo])
-
-    //////////fetch data for the map
     useEffect(()=>{
       fetch(`https://api.openweathermap.org/data/2.5/group?id=${cityIds}&appid=${apiKey}&units=metric&lang=fr`).then(data=>data.json()).then(res=>{
         setCitiesMapData(res.list)
@@ -51,26 +39,6 @@ function App() {
         setCitiesMapData2(res.list)
       })
       },[])
-      /////////// data history : 
-      ///function to delete from history
-      const deleteFromHistory =(id)=>{
-        setdataHistory(pre=>pre.filter(item=>item.id!==id))
-      }
-      //add ti history and delete it after 15min
-      useEffect(()=>{
-        hourlyForcast!==null&&dailyForcast!==null&&setdataHistory([...dataHistory,{
-          id:`${locationInfo.coords.lat}${locationInfo.coords.lng}`,
-          lat:locationInfo.coords.lat,
-          lng:locationInfo.coords.lng,
-          hourlyForcast:hourlyForcast,
-          dailyForcast:dailyForcast,
-          date: new Date()
-        }])
-          setTimeout(() => {
-            deleteFromHistory(`${locationInfo.coords.lat}${locationInfo.coords.lng}`)
-          }, 15*60*1000);
-      },[hourlyForcast,dailyForcast])
-      //console.log(dataHistory)
   return (
     <div className="App">
       <div className='mainCard-map-container'>
