@@ -24,6 +24,12 @@ const MapElement = ({data}) => {
                 document.documentElement.style.setProperty('--left',data.position[1]>2?'-190px':'-15px');
 
                 },
+                click: (e) => {
+                    e.target.openPopup()
+                    document.documentElement.style.setProperty('--bottom',data.position[0]>46?'-200px':'10px');
+                    document.documentElement.style.setProperty('--left',data.position[1]>2?'-190px':'-15px');
+    
+                    },
                 mouseout: (e) => {
                     e.target.closePopup()
                 },

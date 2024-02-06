@@ -67,9 +67,9 @@ const Menu = ({menuSelect,setMenuSelect}) => {
             }),
         }}
         />
-        <a onClick={handleSelect} daysnumber={7} className={`${Styles.a} ${whoIsActive==='7 jour'&&Styles.active}`}>7 jour </a>
-        <a onClick={handleSelect} daysnumber={15} className={`${Styles.a} ${whoIsActive==='15 jour'&&Styles.active}`}>15 jour </a>
-        <a onClick={handleSelect} daysnumber={30} className={`${Styles.a} ${whoIsActive==='30 jour'&&Styles.active}`}>30 jour </a>
+        <a onClick={handleSelect} daysnumber={7} className={`${Styles.a} ${whoIsActive==='7 jours'&&Styles.active}`}>7 jours </a>
+        <a onClick={handleSelect} daysnumber={15} className={`${Styles.a} ${whoIsActive==='15 jours'&&Styles.active}`}>15 jours </a>
+        <a onClick={handleSelect} daysnumber={30} className={`${Styles.a} ${whoIsActive==='30 jours'&&Styles.active}`}>30 jours </a>
     </div>
   )
 }

@@ -6,12 +6,11 @@
 .table-container{
   margin-top: 45px;
   display: flex;
-  margin-left: 10px;
+  width: 100%;
 }
 .mainCard-map-container{
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10px;
   width: 80%;
 }
 
@@ -24,10 +23,14 @@
   .mainCard-map-container{
     justify-content: center;
   }
-
 }
-@media screen and (max-width:352px) {
+@media screen and (min-width:766px) {
   .mainCard-map-container{
-    padding: 5px;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width:542px) {
+  .table-container{
+    padding-left: 10px;
   }
 }

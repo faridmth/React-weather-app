@@ -3,8 +3,9 @@ import Styles from './css/QuickInfoBoxtwo.module.css'
 import Square from './Square'
 import { hourFromUnix } from './functions/hourFromUnix'
 import { getDirection } from './functions/getDirection'
+import { getCurrentDate } from './functions/getCurrentDate'
 
-const QuickInfoBoxtwo = ({data,selctedDay}) => {
+const QuickInfoBoxtwo = ({data,selctedDay}) => {      
     const Squares=[
         {
             text:`${hourFromUnix(data.city.sunrise)}` ,
@@ -44,7 +45,7 @@ const QuickInfoBoxtwo = ({data,selctedDay}) => {
     ]
   return (
     <div className={Styles.cont}>
-        <p className={Styles.title}>Météo aujourd’hui</p>
+        <p className={Styles.title}>Météo aujourd’hui  <span className={Styles.todayDate}>{getCurrentDate()}</span></p>
         <div>
             <div className={Styles.greenSquaresCont}>
             {

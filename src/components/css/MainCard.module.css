@@ -11,6 +11,7 @@ body{
 .mainCard{
     background-color: #F7F9FC;
     width: 30%;
+    height: fit-content;
     min-width: 300px;
     margin-right: 8vw;
 

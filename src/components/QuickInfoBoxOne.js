@@ -7,7 +7,7 @@ const QuickInfoBoxOne = ({data,cityName}) => {
   return (
     <div className={Styles.mainContainer}>
       <div>
-        <h3>Meteo {cityName}</h3>
+        <h3>Météo {cityName}</h3>
         <p>{upperCaseFirstLetter(data.weather[0].description)} {Math.ceil(data.main.feels_like) } °C </p>
       </div>
       <div>

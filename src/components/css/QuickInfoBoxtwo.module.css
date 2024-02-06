@@ -10,4 +10,8 @@
     margin: 15px 4px;
     font-weight: 500;
 }
+.todayDate{
+    white-space: nowrap;
+
+}
   

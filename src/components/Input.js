@@ -37,7 +37,7 @@ const Input = ({locationInfoUpdater}) => {
         <input 
         className={Styles.input}
           type="text"
-          placeholder='Localité, Code postale...'
+          placeholder='Localité, Code postal'
           value={value} 
           onChange={e=>handleChange(e.target.value)}
 

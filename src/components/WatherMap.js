@@ -56,8 +56,8 @@ const WatherMap = ({data}) => {
   })
   const cityCoordinates = [	46.3576, 2.2137];
   const bounds = [
-    [40.7, 9.88888777],
-    [51.1, -4.88888777]
+    [40.7, 10],
+    [52.1, -4.88888777]
   ];
   return (
     <div className='map-reset-container'>
