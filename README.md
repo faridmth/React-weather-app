@@ -1,25 +1,40 @@
 
-### Preview the Web App : 
-# https://journaldufreenaute.fr/watherapp/
-# https://www.meteo15jours.fr/
+# Screenshots
+<img src="https://github.com/faridmth/React-weather-app/assets/123564207/81c3cbf9-6d59-4da1-9287-bb73914f342d"/>
+<img src="https://github.com/faridmth/React-weather-app/assets/123564207/331f0c30-03b8-4bef-a323-0580d8250ca1"/>
 
+## Preview the Web App : 
 
+### [Live Demo 1](https://journaldufreenaute.fr/watherapp/) 
 
-### `npm start`
+### [Live Demo 2](https://www.meteo15jours.fr/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Setup 
+## Clone
+```
+git clone https://github.com/faridmth/React-weather-app.git
+```
+## Install dependencies
+```
+npm i
+```
+## Start the app
+```
+npm start
+```
+After starting the app visit : http://localhost:3000/
+## Build the app
+```
+npm run build
+```
+## Api Used in This Project :
+[Openweathermap](https://openweathermap.org/) for wather information and Geocoding 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Libraries Used in This Project :
+[React-leaflet](https://react-leaflet.js.org/) for the interactive map
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Contact Info : 
+[Linkedin](https://www.linkedin.com/in/farid-methia/) || [Twitter](https://twitter.com/farid_mth)
 
 
 
