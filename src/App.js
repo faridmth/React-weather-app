@@ -7,7 +7,7 @@ import WatherMap from './components/WatherMap';
 
 function App() {
     // openweathermap API_KEY
-    const apiKey='1e5bce2d478d1f387c305d287d5ac18a';
+    const apiKey='YOUR_API_KEY';
     // input place value : Default is paris
     const [locationInfo,setlocationInfo]=useState({cityName: "Paris",coords: { lat: 48.856614, lng: 2.3522219 } });
     // Data from wather api storage
