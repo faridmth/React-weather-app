@@ -5,9 +5,9 @@
 
 ## Preview the Web App : 
 
-### [Live Demo 1](https://journaldufreenaute.fr/watherapp/) 
+### [Live Demo](https://journaldufreenaute.fr/watherapp/) 
 
-### [Live Demo 2](https://www.meteo15jours.fr/)
+
 
 # Setup 
 ## Clone
