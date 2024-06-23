@@ -1,6 +1,6 @@
 {
   "name": "wather-app",
-  "homepage": "https://journaldufreenaute.fr/watherapp/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
